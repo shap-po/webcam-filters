@@ -1,0 +1,41 @@
+* {
+	font-family: Times;
+	font-size: 14px;
+	/*border: 2px solid black;*/
+}
+
+RoundedPreviewLabel {
+	border-radius: 25px;
+	background-color: black;
+}
+RoundedFrameBorders {
+	border-radius: 25px;
+	border: 4px solid black;
+}
+
+QPushButton {
+	border-radius: 16px;
+	border: 2px solid black;
+	background-color: #cccccc;
+	color: #474747;
+	max-width: 10000px;
+	max-height: 10000px;
+}
+QPushButton:checked {
+	background-color: #007acc;
+	color: #ffffff;
+}
+QPushButton:hover {
+	background-color: #999999;
+}
+QPushButton:checked:hover {
+	background-color: #0090f2;
+}
+
+FilterButton {
+	min-width: 128px;
+	min-height: 32px;
+}
+Slider {
+	max-width: 10000px;
+}

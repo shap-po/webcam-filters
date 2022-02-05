@@ -1,0 +1,59 @@
+{
+    "title": "Webcam Filters GUI", 
+    "preview": {
+        "enabled": true,
+        "round": true,
+        "mirrored": true,
+        "position": "left"
+    },
+    "buttons": [
+        [
+            {
+                "filter":  "_ filter class; the button will be ignored if class starts with '_' or not set", 
+                "name": "button name, you should not add it if class's name equals button's name", 
+                "hotkey":  "key or key combination; do not add if you want to access it only by button", 
+                "args":    ["list or dictionary of arguments for filter"],
+                "enabled": false
+            },
+
+            {"filter": "Pause", "hotkey": "CapsLock"},
+            {"filter": "ReloadGUI", "name": "Reload"},
+            {"filter": "ResetButtons", "name": "Reset"},
+            {"filter": "ActivateAll"},
+            {"filter": "DeactivateAll"}
+        ],
+        [
+            {"filter": "MirrorX", "hotkey": {"ctrl+left": true, "ctrl+right": false}, "enabled": true},
+            {"filter": "MirrorY", "hotkey": {"ctrl+up": false, "ctrl+down": true}}
+        ],
+        [
+            {"filter": "Negative"},
+            {"filter": "Grayscale"},
+            {"filter": "SkipFrames"},
+            {"name": "LowerQ", "filter": "FilterPack", "args": {
+                "filters":[
+                    {"filter": "Pixelized"}, 
+                    {"filter": "FPS", "args": {"global_fps": 20}}
+                ], 
+                "priority": 0}
+            }
+        ],
+        [
+            {"filter": "FPS"},
+            {"filter": "Pixelized"},
+            {"filter": "Blur"},
+            {"filter": "Noise"}
+        ],
+        [
+            {"name": "Images", "filter": "ImageList", "args": [[
+                ["images/cat.jpeg"],
+                ["images/Shrek.png"],
+                ["images/L.png"],
+                ["images/Ryuk.jpg"],
+                ["images/Floppa.png"],
+                ["images/Oh you're from England.jpg", true]
+            ]]},
+            {"name": "Gandalf", "filter": "Video", "args": ["images/Gandalf.gif"]}
+        ]
+    ]
+}

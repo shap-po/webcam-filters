@@ -1,0 +1,5 @@
+opencv-python
+pyvirtualcam
+numpy
+PyQt6
+keyboard
